@@ -10,6 +10,17 @@
                 --blue-bck: hsl(240deg, 94%, 39%);
                 --red-bck: hsl(354deg, 100%, 40%);
                 --charcoal: hsl(0deg, 0%, 20%);
+                --welcome-header: 50pt;
+                --welcome-p: 20pt;
+            }
+
+
+            @media(max-width: 768px) {
+                
+                :root {
+                    --welcome-header: 22pt;
+                    --welcome-p: 16pt;
+                }
             }
 
             a {
@@ -76,6 +87,8 @@
 
             .project-tile {
                 background: darkgray;
+                border: 1px solid transparent;
+                border-radius: 10px;
             }
 
             .tech-list > ul {
@@ -98,13 +111,19 @@
 
             .welcome-section > h1 {
                 padding-top: 5em;
+                font-size: var(--welcome-header);
+                margin-top: 0;
+            }
+
+            .welcome-section > p {
+                font-size: var(--welcome-p);
             }
 
             #navbar {
                 background: black;
                 background-image: linear-gradient(black, var(--charcoal));
-                box-shadow: 0px 1px 4px -2px #111;
-                text-shadow: 0px -1px #333;
+                box-shadow: 0px 1px 5px -1px black;
+                text-shadow: 0px -1px black;
             }
 
             #navbar::after {
