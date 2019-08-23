@@ -9,6 +9,7 @@
                 /*put my color scheme here*/
                 --blue-bck: hsl(240deg, 94%, 39%);
                 --red-bck: hsl(354deg, 100%, 40%);
+                --charcoal: hsl(0deg, 0%, 10%);
             }
 
             a {
@@ -33,12 +34,12 @@
             nav {
                 position: fixed;
                 width: 100%;
-                background: white;
                 top: 0;
                 left: 0;
                 z-index: 100;
                 /*border: 2px solid red;*/
             }
+
 
             ul {
                 display: flex;
@@ -101,9 +102,21 @@
 
             #navbar {
                 background: black;
+                background-image: linear-gradient(black, var(--charcoal));
+            }
+
+            #navbar::after {
+                content: '';
+                position: absolute;
+                top: 2px;
+                left: 2px;
+                width: calc(100% - 4px);
+                height: 50%;
+                background: linear-gradient(rgba(255,255,255,0.5),rgba(255,255,255,0.2));
             }
 
             #contact-info {
+                height: 50em;
                 background: black;
             }
 
@@ -195,8 +208,8 @@
             <p>If you would like to get in touch with me, follow one of the links below!</p>
             <section class="links">
                 <a href="https://www.linkedin.com/in/jesus-rodriguez-38b7b7186/ target="_blank">Linked-In</a>
-                <a href="https://github.com/JesusRodriguezUNT" target="_blank">E-mail</a>
-                <a id="profile-link" href="mailto:jesusrodriguez5unt@gmail.com" target="_blank">GitHub</a>
+                <a id="profile-link" href="https://github.com/JesusRodriguezUNT" target="_blank">GitHub</a>
+                <a href="mailto:jesusrodriguez5unt@gmail.com" target="_blank">E-Mail</a>
             </section>
         </div>
     </body>
