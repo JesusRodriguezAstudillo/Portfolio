@@ -12,6 +12,7 @@
                 --charcoal: hsl(0deg, 0%, 20%);
                 --welcome-header: 50pt;
                 --welcome-p: 20pt;
+                --nav-font-size: 20pt;
             }
 
 
@@ -20,6 +21,7 @@
                 :root {
                     --welcome-header: 22pt;
                     --welcome-p: 16pt;
+                    --nav-font-size: 16pt;
                 }
             }
 
@@ -29,7 +31,7 @@
             }
 
             body {
-                color: white;
+                color: lightgray;
                 height: 100%;
                 width: 100%;
                 text-align: center;
@@ -45,9 +47,11 @@
             nav {
                 position: fixed;
                 width: 100%;
+                height: auto;
                 top: 0;
                 left: 0;
                 z-index: 100;
+                font-size: var(--nav-font-size);
                 /*border: 2px solid red;*/
             }
 
@@ -68,7 +72,8 @@
                 grid-template-columns: repeat(auto-fit, minmax(320px, 3fr));
                 grid-column-gap: 2em;
                 grid-row-gap: 4em;
-                width: 100%;
+                width: 95%;
+                margin: auto;
             }
 
             .gallery-link {
@@ -113,6 +118,7 @@
                 padding-top: 5em;
                 font-size: var(--welcome-header);
                 margin-top: 0;
+                text-shadow: 0px 1px 0px #999, 0px 2px 0px #888, 0px 3px 0px #777, 0px 4px 0px #666;
             }
 
             .welcome-section > p {
@@ -136,8 +142,13 @@
                 background: linear-gradient(rgb(240, 240, 240, 0.4),rgba(240,240,240,0.1));
             }
 
+            #navbar > ul > li > a:hover {
+                color: white;
+                text-shadow: 1px 1px 2px rgb(255, 255, 164);
+            }
+
             #contact-info {
-                height: 50em;
+                height: 10em;
                 background: black;
             }
 
