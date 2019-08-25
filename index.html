@@ -8,6 +8,7 @@
                 --fonts: tahoma;
                 /*put my color scheme here*/
                 --blue-bck: hsl(240deg, 94%, 39%);
+                --purple-bck: hsl(293deg, 94%, 15%);
                 --red-bck: hsl(354deg, 100%, 40%);
                 --charcoal: hsl(0deg, 0%, 20%);
                 --welcome-header: 50pt;
@@ -25,13 +26,19 @@
                 }
             }
 
+            @media(min-width: 769px) {
+                .welcome-section > h1 {
+                    margin: 0 100px 0 100px;
+                }
+            }
+
             a {
                 text-decoration: none;
                 color: inherit;
             }
 
             body {
-                color: lightgray;
+                color: white;
                 height: 100%;
                 width: 100%;
                 text-align: center;
@@ -107,7 +114,8 @@
             }
 
             .welcome-section {
-                background: var(--blue-bck);
+                background: var(--purple-bck);
+                background: linear-gradient(100deg, var(--purple-bck) 10%, white 10%, white 11%, var(--purple-bck) 11%, var(--purple-bck) 12%, white 12%, white 25%, var(--purple-bck) 25%);
                 position: relative;
                 left: 0;
                 height: 100vh;
@@ -115,36 +123,20 @@
             }
 
             .welcome-section > h1 {
-                padding-top: 5em;
                 font-size: var(--welcome-header);
                 margin-top: 0;
-                text-shadow: 0px 1px 0px #999, 0px 2px 0px #888, 0px 3px 0px #777, 0px 4px 0px #666;
+                background: hsla(293deg, 94%, 15%);
+                border: 1px solid transparent;
+                border-radius: 100px;
             }
 
             .welcome-section > p {
                 font-size: var(--welcome-p);
+                background: hsla(293deg, 94%, 15%);
             }
 
             #navbar {
                 background: black;
-                background-image: linear-gradient(black, var(--charcoal));
-                box-shadow: 0px 1px 5px -1px black;
-                text-shadow: 0px -1px black;
-            }
-
-            #navbar::after {
-                content: '';
-                position: absolute;
-                top: 2px;
-                left: 2px;
-                width: calc(100% - 4px);
-                height: 50%;
-                background: linear-gradient(rgb(240, 240, 240, 0.4),rgba(240,240,240,0.1));
-            }
-
-            #navbar > ul > li > a:hover {
-                color: white;
-                text-shadow: 1px 1px 2px rgb(255, 255, 164);
             }
 
             #contact-info {
@@ -176,6 +168,7 @@
             </ul>
         </nav>
         <section id="welcome-section" class="welcome-section">
+            <div style="height: 20em; width: 5em;"></div>
             <h1>Hey, I'm Jesus Rodriguez</h1>
             <p>An aspiring software engineer and web developer</p>
         </section>
