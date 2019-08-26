@@ -9,9 +9,9 @@
                 --fonts: 'Nunito', 'Ubuntu', Verdana, sans-sarif;
                 --tech-fonts: 'Ubuntu Mono', 'Courier New', monospace;
                 /*put my color scheme here*/
-                --blue-bck: hsl(240deg, 94%, 39%);
+                --blue-bck: hsla(173, 90%, 38%, 1) ;
                 --purple-bck: hsl(293deg, 94%, 15%);
-                --wine-bck: hsla(338, 99%, 27%, 1);
+                --wine-bck: hsla(338deg, 99%, 27%, 1);
                 --charcoal: hsl(0deg, 0%, 20%);
                 --welcome-header: 50pt;
                 --welcome-p: 20pt;
@@ -116,9 +116,14 @@
             }
 
             .project-tile {
-                background: darkgray;
-                border: 1px solid transparent;
+                background: var(--blue-bck);
+                border: 0px solid transparent;
                 border-radius: 10px;
+                box-shadow: -2px -2px 3px hsla(173, 90%, 30%, 1) inset, 2px 2px 3px hsla(173, 90%, 50%, 1) inset;
+            }
+
+            .tech-list {
+                font-family: var(--tech-fonts);
             }
 
             .tech-list > ul {
