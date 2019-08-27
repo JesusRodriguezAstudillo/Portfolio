@@ -8,16 +8,16 @@
             :root {
                 --fonts: 'Nunito', 'Ubuntu', Verdana, sans-sarif;
                 --tech-fonts: 'Ubuntu Mono', 'Courier New', monospace;
-                /*put my color scheme here*/
-                --blue-bck: hsla(173, 90%, 38%, 1) ;
-                --purple-bck: hsl(293deg, 94%, 15%);
-                --wine-bck: hsla(338deg, 99%, 27%, 1);
-                --charcoal: hsl(0deg, 0%, 20%);
                 --welcome-header: 50pt;
                 --welcome-p: 20pt;
                 --nav-font-size: 20pt;
                 --welcome-padding: 10em;
                 --h2-size: 40pt;
+ 
+                --blue-bck: hsla(173, 90%, 38%, 1) ;
+                --purple-bck: hsl(293deg, 94%, 15%);
+                --wine-bck: hsla(338deg, 99%, 27%, 1);
+                --charcoal: hsl(0deg, 0%, 20%);
             }
 
 
@@ -57,6 +57,10 @@
                 padding: 0 .4em 0 .4em;
             }
 
+            h3 {
+                font-size: 20pt;
+            }
+
             nav {
                 position: fixed;
                 width: 100%;
@@ -72,6 +76,17 @@
             ul {
                 display: flex;
                 justify-content: flex-end;
+            }
+
+            span {
+                display: inline-block;
+            }
+
+            .icon {
+                z-index: 50;
+                padding: 0 .3em 0 1em;
+                width: 25px;
+                filter: invert(100%);
             }
 
             .doc-link {
@@ -118,8 +133,19 @@
             .project-tile {
                 background: var(--blue-bck);
                 border: 0px solid transparent;
+                border-radius: 25px;
+                box-shadow: 2px 2px 3px hsla(173, 90%, 30%, 1);
+                color: hsla(173, 100%, 10%, 1);
+                padding-bottom: 1em;
+            }
+
+            .project-tile > a {
+                color: black;
+                border: 2px solid black;
                 border-radius: 10px;
-                box-shadow: -2px -2px 3px hsla(173, 90%, 30%, 1) inset, 2px 2px 3px hsla(173, 90%, 50%, 1) inset;
+                background: white;
+                margin-bottom: .5em;
+                padding: 10px 20px 0 20px;
             }
 
             .tech-list {
@@ -159,12 +185,19 @@
             }
 
             #contact-info {
-                height: 10em;
+                height: 20em;
                 background: black;
+            }
+
+            #contact-info > h2 {
+                font-size: var(--h2-size);
+                margin: 0;
+                padding: 1em 0 .2em 0;
             }
 
             #contact-info > p {
                 margin-top: 0;
+                font-size: var(--welcome-p);
             }
 
             #navbar {
@@ -207,7 +240,7 @@
             <h2>Projects</h2>
             <div class="gallery">
                 <div class="project-tile">
-                    <h4>Survey Form</h4>
+                    <h3>Survey Form</h3>
                     <img class="image" src="Static/Images/SurveyForm.PNG">
                     <div class="tech-list">
                         <strong>Technologies used</strong>
@@ -220,7 +253,7 @@
                     <a class="gallery-link" target="_blank" href="https://jesusrodriguezunt.github.io/SurveyForm/">Live Site</a>
                 </div>
                 <div class="project-tile">
-                    <h4>Product Landing Page</h4>
+                    <h3>Product Landing Page</h3>
                     <img class="image" src="Static/Images/ProductLandingPage.PNG">
                     <div class="tech-list">
                         <strong>Technologies used</strong>
@@ -233,7 +266,7 @@
                     <a class="gallery-link" target="_blank" href="https://jesusrodriguezunt.github.io/ProductLandingPage/">Live Site</a>
                 </div>
                 <div class="project-tile">
-                    <h4>Technical Documentation</h4>
+                    <h3>Technical Documentation</h3>
                     <img class="image" src="Static/Images/TechnicalDocumentation.PNG">
                     <div class="tech-list">
                         <strong>Technologies used</strong>
@@ -246,7 +279,7 @@
                     <a class="gallery-link" target="_blank" href="https://jesusrodriguezunt.github.io/TechnicalDocumentationProject/">Live Site</a>
                 </div>
                 <div class="project-tile">
-                    <h4>Tribute Page</h4>
+                    <h3>Tribute Page</h3>
                     <img class="image" src="Static/Images/TributePage.PNG">
                     <div class="tech-list">
                         <strong>Technologies used</strong>
@@ -261,11 +294,13 @@
             </div>
         </div>
         <div id="contact-info">
-            <p>If you would like to get in touch with me, follow one of the links below!</p>
+            <h2>Want to get in touch?</h2>
+            <p>Follow one of the links below or download my resume.</p>
             <section class="links">
-                <a href="https://www.linkedin.com/in/jesus-rodriguez-38b7b7186/ target="_blank">Linked-In</a>
-                <a id="profile-link" href="https://github.com/JesusRodriguezUNT" target="_blank">GitHub</a>
-                <a href="mailto:jesusrodriguez5unt@gmail.com" target="_blank">E-Mail</a>
+                <a href="https://www.linkedin.com/in/jesus-rodriguez-38b7b7186/ target="_blank"><img class="icon" src="Static/Images/linkedin-icon.png"><span>Linked-In<span></a>
+                <a id="profile-link" href="https://github.com/JesusRodriguezUNT" target="_blank"><img class="icon" src="Static/Images/github-icon.png">GitHub</a>
+                <a href="mailto:jesusrodriguez5unt@gmail.com" target="_blank"><img class="icon" src="Static/Images/e-mail-icon.png">E-Mail</a>
+                <a href="Static/Images/Resume.pdf" target="_blank"><img class="icon" src="Static/Images/file-icon.png">Resume</a>
             </section>
         </div>
     </body>
