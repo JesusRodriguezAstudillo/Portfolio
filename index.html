@@ -10,9 +10,11 @@
                 --tech-fonts: 'Ubuntu Mono', 'Courier New', monospace;
                 --welcome-header: 50pt;
                 --welcome-p: 20pt;
+                --contact-height: 20em;
                 --nav-font-size: 20pt;
                 --welcome-padding: 10em;
                 --h2-size: 40pt;
+                --icon-padding: 0 .3em 0 1em;
  
                 --blue-bck: hsla(173, 90%, 38%, 1) ;
                 --purple-bck: hsl(293deg, 94%, 15%);
@@ -21,17 +23,28 @@
             }
 
 
-            @media(max-width: 768px) {
-                
+            @media(max-width: 500px) {
                 :root {
                     --welcome-header: 30pt;
                     --welcome-p: 16pt;
                     --welcome-padding: 7em;
                     --nav-font-size: 16pt;
+                    --contact-height: 30em;
+                    --icon-padding: 0;
+                }
+
+                span {
+                    display: block;
+                    padding-left: .8em;
+                }
+
+                .icon {
+                    left: 6px;
+                    width: 100%;
                 }
             }
 
-            @media(min-width: 769px) {
+            @media(min-width: 501px) {
                 .welcome-section > h1 {
                     margin: 0 100px 0 100px;
                 }
@@ -69,24 +82,21 @@
                 left: 0;
                 z-index: 100;
                 font-size: var(--nav-font-size);
-                /*border: 2px solid red;*/
             }
-
 
             ul {
                 display: flex;
                 justify-content: flex-end;
             }
 
-            span {
-                display: inline-block;
-            }
-
             .icon {
                 z-index: 50;
-                padding: 0 .3em 0 1em;
+                /*padding: 0 .3em 0 1em;*/
+                padding: var(--icon-padding);
                 width: 25px;
                 filter: invert(100%);
+                position: relative;
+                top: .45em;
             }
 
             .doc-link {
@@ -121,8 +131,12 @@
                 width: 4em;
                 margin: auto;
                 display: block;
-                background: lightgray;
-                border: 1px solid black;
+                border: 5px double black;
+                border-radius: 10px;
+                color: black;
+                background: white;
+                margin-bottom: .5em;
+                padding: 10px 20px 0 20px;
             }
 
             .links {
@@ -139,17 +153,9 @@
                 padding-bottom: 1em;
             }
 
-            .project-tile > a {
-                color: black;
-                border: 2px solid black;
-                border-radius: 10px;
-                background: white;
-                margin-bottom: .5em;
-                padding: 10px 20px 0 20px;
-            }
-
             .tech-list {
                 font-family: var(--tech-fonts);
+                font-size: 18pt;
             }
 
             .tech-list > ul {
@@ -160,6 +166,7 @@
                 padding: 0;
                 list-style-type: disc;
                 text-align: left;
+                font-size: 16pt;
             }
 
             .welcome-section {
@@ -185,14 +192,14 @@
             }
 
             #contact-info {
-                height: 20em;
+                height: var(--contact-height);
                 background: black;
             }
 
             #contact-info > h2 {
                 font-size: var(--h2-size);
                 margin: 0;
-                padding: 1em 0 .2em 0;
+                padding: 1.5em 0 .2em 0;
             }
 
             #contact-info > p {
@@ -298,9 +305,9 @@
             <p>Follow one of the links below or download my resume.</p>
             <section class="links">
                 <a href="https://www.linkedin.com/in/jesus-rodriguez-38b7b7186/ target="_blank"><img class="icon" src="Static/Images/linkedin-icon.png"><span>Linked-In<span></a>
-                <a id="profile-link" href="https://github.com/JesusRodriguezUNT" target="_blank"><img class="icon" src="Static/Images/github-icon.png">GitHub</a>
-                <a href="mailto:jesusrodriguez5unt@gmail.com" target="_blank"><img class="icon" src="Static/Images/e-mail-icon.png">E-Mail</a>
-                <a href="Static/Images/Resume.pdf" target="_blank"><img class="icon" src="Static/Images/file-icon.png">Resume</a>
+                <a id="profile-link" href="https://github.com/JesusRodriguezUNT" target="_blank"><img class="icon" src="Static/Images/github-icon.png"><span>GitHub</span></a>
+                <a href="mailto:jesusrodriguez5unt@gmail.com" target="_blank"><img class="icon" src="Static/Images/e-mail-icon.png"><span>E-Mail</span></a>
+                <a href="Static/Images/JesusRodriguezResume.pdf" target="_blank"><img class="icon" src="Static/Images/file-icon.png"><span>Resume</span></a>
             </section>
         </div>
     </body>
