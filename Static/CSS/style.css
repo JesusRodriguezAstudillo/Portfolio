@@ -10,8 +10,8 @@
     --h2-size: 40pt;
     --icon-padding: 0 .3em 0 1em;
 
-    /*--blue-bck: hsla(190, 90%, 38%, 1) ;*/
-    --blue-bck: hsla(206, 100%, 30%, 1) ;
+    /* Main colors used in the page */
+    --blue-bck: hsla(206, 100%, 30%, 1);
     --purple-bck: hsl(293deg, 94%, 15%);
     --wine-bck: hsla(338deg, 99%, 27%, 1);
     --charcoal: hsl(0deg, 0%, 20%);
@@ -115,6 +115,7 @@ ul {
     width: 100%;
     object-fit: cover;
     height: 16rem;
+    margin-bottom: 1em;
 }
 
 .gallery {
@@ -149,7 +150,7 @@ ul {
     background: var(--blue-bck);
     border: 0px solid transparent;
     border-radius: 25px;
-    box-shadow: 2px 2px 5px 3px hsla(190, 90%, 25%, 1);
+    box-shadow: 2px 2px 5px 3px hsla(206, 100%, 15%, 1);
     color: white;
     padding-bottom: 1em;
     display: flex;
