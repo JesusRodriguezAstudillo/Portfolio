@@ -227,6 +227,7 @@ ul {
 
 #projects {
     width: 100%;
+    height: 100%;
     padding: 5em 0 5em 0;
     background: var(--wine-bck);
     background: linear-gradient(250deg, var(--wine-bck) 10%, white 10%, white 11%, var(--wine-bck) 11%, var(--wine-bck) 12%, white 12%, white 25%, var(--wine-bck) 25%, var(--wine-bck) 26%, white 26%, white 27%, var(--wine-bck) 27%);
