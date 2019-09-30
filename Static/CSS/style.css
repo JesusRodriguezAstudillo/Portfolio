@@ -149,7 +149,7 @@ ul {
 .project-tile {
     background: var(--blue-bck);
     border: 0px solid transparent;
-    border-radius: 25px;
+    border-radius: 5px;
     box-shadow: 2px 2px 5px 3px hsla(206, 100%, 15%, 1);
     color: white;
     padding-bottom: 1em;
@@ -181,7 +181,7 @@ ul {
 
 .welcome-section {
     background: var(--purple-bck);
-    background: linear-gradient(100deg, var(--purple-bck) 10%, white 10%, white 11%, var(--purple-bck) 11%, var(--purple-bck) 12%, white 12%, white 25%, var(--purple-bck) 25%);
+    background: linear-gradient(90deg, var(--purple-bck) 10%, white 10%, white 11%, var(--purple-bck) 11%, var(--purple-bck) 12%, white 12%, white 25%, var(--purple-bck) 25%);
     position: relative;
     left: 0;
     height: 100vh;
@@ -227,10 +227,10 @@ ul {
 
 #projects {
     width: 100%;
-    height: 100%;
+    height: auto;
     padding: 5em 0 5em 0;
     background: var(--wine-bck);
-    background: linear-gradient(250deg, var(--wine-bck) 10%, white 10%, white 11%, var(--wine-bck) 11%, var(--wine-bck) 12%, white 12%, white 25%, var(--wine-bck) 25%, var(--wine-bck) 26%, white 26%, white 27%, var(--wine-bck) 27%);
+    background: linear-gradient(270deg, var(--wine-bck) 10%, white 10%, white 11%, var(--wine-bck) 11%, var(--wine-bck) 12%, white 12%, white 25%, var(--wine-bck) 25%, var(--wine-bck) 26%, white 26%, white 27%, var(--wine-bck) 27%);
 }
 
 #projects > h2 {
